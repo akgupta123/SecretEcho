@@ -59,7 +59,7 @@ const socketHandler = (server) => {
     });
     
     socket.on('disconnect', () => {
-      console.log(`User disconnected: ${user.username} (${userId})`);
+    //  console.log(`User disconnected: ${user?.username} (${userId})`);
       Message.findByIdAndUpdate(userId, {
         isActive: false,
         lastSeen: Date.now() 

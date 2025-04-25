@@ -73,6 +73,7 @@ const createMessage = async (req, res, next) => {
       }
     });
   } catch (error) {
+    console.log(error,"errror")
     next(error);
   }
 };

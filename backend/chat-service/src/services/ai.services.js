@@ -64,9 +64,9 @@ const responseTemplates = [
       .replace('{related}', relatedTopic);
     if (Math.random() < 0.3) {
       const personalizedIntros = [
-        `${user.username}, `,
-        `By the way ${user.username}, `,
-        `You know ${user.username}, `
+        `${user?.username}, `,
+        `By the way ${user?.username}, `,
+        `You know ${user?.username}, `
       ];
       const intro = personalizedIntros[Math.floor(Math.random() * personalizedIntros.length)];
       response = intro + response.charAt(0).toLowerCase() + response.slice(1);
